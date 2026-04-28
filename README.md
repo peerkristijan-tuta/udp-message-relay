@@ -10,7 +10,8 @@ Instructions to run
 6. Compile and run Receive.java in its EC2 instance. Example output for input in 5: "word"
 
 Program flow
-- Receiver splits four digit input into half and send 2 to Mediate1 and 2 to Mediate2
-- 
+1. Sender splits four digit input into half and send 2 to Mediate1 and 2 to Mediate2
+2. When on continuous run mode, Mediate 1 and 2 will print to terminal to indicate when message successfully sent to receiver after receiver sends confirmation back
+3. When receiver runs, it waits until a message is received before sending confirmation (in UDP) message to Mediate 1 and 2, displaying the message (it combines the messages by Mediate 1 and 2), and exiting. Otherwise, ctrl+c will be needed to exit it manually.
 
   
