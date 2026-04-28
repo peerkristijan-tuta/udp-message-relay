@@ -1,4 +1,26 @@
-public void run() {
+class Network1 extends Thread {
+    byte[] converter(String text) {
+        byte[] bytes = new byte[text.length()];
+
+        for (int x = 0; x < text.length(); x++)
+            bytes[x] = (byte) text.charAt(x);
+
+        return bytes;
+    }
+
+    String converter(byte[] bytes) {
+        String text = "";
+
+        for (int x = 0; x < bytes.length; x++)
+            text += (char) bytes[x];
+
+        return text;
+    }
+
+    String state = "receive";
+    static boolean condition = true;
+
+    public void run() {
         try {
             byte[] bytes = new byte[3];
             
@@ -20,7 +42,7 @@ public void run() {
                         state = "deliver";
                     } catch (SocketTimeoutException timeout) {};
                 } else {
-                    bytes[2] = (byte)'1';
+                    bytes[2] = (byte)'2';
 
                     while (true) {
                         try {
