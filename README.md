@@ -1,3 +1,6 @@
+
+(kindly consult the deployment diagram for a visualization of the distributed system's architecture)
+
 Instructions to run
 1. Launch 4 EC2 instances
 2. Reserve an elastic IP address for each, so that they're not changed mid-way by AWS
