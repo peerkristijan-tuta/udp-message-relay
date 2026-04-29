@@ -1,5 +1,5 @@
 
-(kindly consult the deployment diagram for a visualization of the distributed system's architecture)
+Note: Kindly consult the deployment diagram for a visualization of the distributed system's architecture and program flow.
 
 Instructions to run
 1. Launch 4 EC2 instances
